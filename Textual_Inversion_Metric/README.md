@@ -1,4 +1,4 @@
-{
+
 How good is textual inversion trained Stable Diffusion 2 at generating new realistic Cézanne landscape paintings? Does a fine-tuned Convolutional Neural Network (based on MobileNet) classify their style as Original, Replica, Stable Diffusion image w/o textual inversion, or General Impressionist Landscape Painting? \
 \
 The dataset to fine-tune the CNN (MobileNet) consists of a range of landscape paintings similar in style to that of Paul Cézanne. The photographs of the images are unfortunately not consistent in quality and were taken from a range of different sources. The images were curated and divided into 5 categories from most (0) to least similar (4) in style.\
@@ -13,4 +13,3 @@ Textual Inversion was not implemented when creating the dataset. A separate test
 \
 Before training the CNN, the images were all resized to (512, 512, 3). This was done to disabuse the CNN from learning image sizes. Furthermore, the images were all converted to grayscale. This was done to disabuse the CNN from learning color schemes, as color is difficult to grasp consistently for cameras and depends on lighting etc..  \
 \
-}
