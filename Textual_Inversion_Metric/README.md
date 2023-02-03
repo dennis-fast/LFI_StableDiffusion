@@ -10,6 +10,11 @@ The dataset to fine-tune the CNN (MobileNet) consists of a range of landscape pa
 4 - Impressionist landscape paintings from WikiArt dataset - 94 images\
 \
 Textual Inversion was not implemented when creating the dataset. A separate test dataset with Textual Inversion generated Cézanne landscape paintings was created. \
+
+TIDS1 - images created by Stable Diffusion 2 with textual inversion trained prompt: "<Cézanne> landscape painting"
+
+TIDS2 - images created by Stable Diffusion 2 with textual inversion trained prompt: "<Cézanne>"
+
 \
 Before training the CNN, the images were all resized to (512, 512, 3). This was done to disabuse the CNN from learning image sizes. Furthermore, the images were all converted to grayscale. This was done to disabuse the CNN from learning color schemes, as color is difficult to grasp consistently for cameras and depends on lighting etc..  
 
