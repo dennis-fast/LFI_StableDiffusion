@@ -9,7 +9,7 @@ The dataset to fine-tune the CNN (MobileNet) consists of a range of landscape pa
 3 - Stable Diffusion 1.5 generated Cézanne landscape paintings with guidance scale 0-1 (w/o textual inversion) - 93 images\
 4 - Impressionist landscape paintings from WikiArt dataset - 94 images\
 \
-Textual Inversion was not implemented when creating the dataset. A separate test dataset with Textual Inversion generated Cézanne landscape paintings was created. \
+Textual Inversion was not implemented when creating the dataset. A separate test dataset with Textual Inversion generated Cézanne landscape paintings was created. 
 
 TIDS1 - images created by Stable Diffusion 2 with textual inversion trained prompt: "<Cézanne> landscape painting"
 
