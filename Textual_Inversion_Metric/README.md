@@ -21,3 +21,8 @@ TIDS4 - images created by Stable Diffusion 2 with textual inversion trained prom
 
 Before training the CNN, the images were all resized to (512, 512, 3). This was done to disabuse the CNN from learning image sizes. Furthermore, the images were all converted to grayscale. This was done to disabuse the CNN from learning color schemes, as color is difficult to grasp consistently for cameras and depends on lighting etc..  
 
+Three different fine-tuned Convolutional Neural Network models were employed to judge the quality of the textual inversion generated images: MobileNet, EfficinetNetB7 and EfficientNetV2L. All were trained using the Keras libary.
+  
+  
+ [a link]([https://github.com/user/repo/blob/branch/other_file.md](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/Textual_Inversion_Metric/Cezanne_MobileNet.ipynb))
+ 
