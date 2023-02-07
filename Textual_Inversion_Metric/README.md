@@ -11,13 +11,13 @@ The dataset to fine-tune the CNN consists of a range of landscape paintings simi
 \
 Textual Inversion was not implemented when creating the dataset. A separate test dataset with Textual Inversion generated Cézanne landscape paintings was created [here](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/Textual_Inversion_Metric/StableDiffusion2_textual_inversion_image_generator.ipynb). The code for Textual Inversion training of Stable Diffusion can be found [here](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/Textual_Inversion_Metric/StableDiffusion2_textual_inversion_training.ipynb)
 
-TIDS1 - images created by Stable Diffusion 2 with textual inversion trained prompt: "painting in the style of <Cézanne>"
+TISD1 - images created by Stable Diffusion 2 with textual inversion trained prompt: "painting in the style of <Cézanne>"
 
-TIDS2 - images created by Stable Diffusion 2 with textual inversion trained prompt: "landscape painting in the style of <Cézanne>"
+TISD2 - images created by Stable Diffusion 2 with textual inversion trained prompt: "landscape painting in the style of <Cézanne>"
 
-TIDS3 - images created by Stable Diffusion 2 with textual inversion trained prompt: "painting of the Provence in the style of <Cézanne>"
+TISD3 - images created by Stable Diffusion 2 with textual inversion trained prompt: "painting of the Provence in the style of <Cézanne>"
 
-TIDS4 - images created by Stable Diffusion 2 with textual inversion trained prompt: "painting of Mont Saint Victoire in the style of <Cézanne>"
+TISD4 - images created by Stable Diffusion 2 with textual inversion trained prompt: "painting of Mont Saint Victoire in the style of <Cézanne>"
 
 Before training the CNN, the images were all resized to (512, 512, 3). This was done to disabuse the CNN from learning image sizes. Furthermore, the images were all converted to grayscale. This was done to disabuse the CNN from learning color schemes, as color is difficult to grasp consistently for cameras and depends on lighting etc.. The code for data preparation can be found [here](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/Textual_Inversion_Metric/Data%20Cleaning.ipynb).
 
