@@ -1,7 +1,7 @@
 
 How good is textual inversion trained Stable Diffusion 2 at generating new realistic Cézanne landscape paintings? Does a fine-tuned Convolutional Neural Network classify their style as Original, Replica, Stable Diffusion image w/o textual inversion, or General Impressionist Landscape Painting? \
 \
-The dataset to fine-tune the CNN consists of a range of landscape paintings similar in style to that of Paul Cézanne. The photographs of the images are unfortunately not consistent in quality and were taken from a range of different sources. The images were curated and divided into 5 categories from most (0) to least similar (4) in style. The code to generate images with Stable Diffusion 1.5 can be found [here](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/Textual_Inversion_Metric/StableDiffusion1.5_image_generator.ipynb).
+The dataset to fine-tune the CNN consists of a range of landscape paintings similar in style to that of Paul Cézanne. The photographs of the images are unfortunately not consistent in quality and were taken from a range of different sources. The images were curated and divided into 5 categories from most (0) to least similar (4) in style. The code to generate images with Stable Diffusion 1.5 can be found [here](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/Textual_Inversion_Metric/StableDiffusion1.5_image_generator.ipynb).\
 \
 0 - authentic Cézanne landscape paintings - 89 images\
 1 - hand-painted replicas and forgeries of authentic Cézanne landscape paintings - 68 images\
