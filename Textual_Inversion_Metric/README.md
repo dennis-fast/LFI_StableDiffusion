@@ -13,12 +13,12 @@ Textual Inversion was not implemented when creating the dataset. A separate test
 
 TIDS1 - images created by Stable Diffusion 2 with textual inversion trained prompt: "painting in the style of <Cézanne>"
 
-TIDS2 - images created by Stable Diffusion 2 with textual inversion trained prompt: "landscape painting in the style of <Cézanne>"\
+TIDS2 - images created by Stable Diffusion 2 with textual inversion trained prompt: "landscape painting in the style of <Cézanne>"
 
-TIDS3 - images created by Stable Diffusion 2 with textual inversion trained prompt: "painting of the Provence in the style of <Cézanne>"\
+TIDS3 - images created by Stable Diffusion 2 with textual inversion trained prompt: "painting of the Provence in the style of <Cézanne>"
 
-TIDS4 - images created by Stable Diffusion 2 with textual inversion trained prompt: "painting of Mont Saint Victoire in the style of <Cézanne>"\
-
+TIDS4 - images created by Stable Diffusion 2 with textual inversion trained prompt: "painting of Mont Saint Victoire in the style of <Cézanne>"
+\
 Before training the CNN, the images were all resized to (512, 512, 3). This was done to disabuse the CNN from learning image sizes. Furthermore, the images were all converted to grayscale. This was done to disabuse the CNN from learning color schemes, as color is difficult to grasp consistently for cameras and depends on lighting etc.. The code for data preparation can be found [here](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/Textual_Inversion_Metric/Data%20Cleaning.ipynb).
 
 Three different fine-tuned Convolutional Neural Network models were employed to judge the quality of the textual inversion generated images: [MobileNet](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/Textual_Inversion_Metric/Cezanne_MobileNet.ipynb), [EfficinetNetB7](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/Textual_Inversion_Metric/Cezanne_efficientnetb7.ipynb) and [EfficientNetV2L](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/Textual_Inversion_Metric/Cezanne_efficientnetv2l.ipynb). All were trained using the Keras libary.
