@@ -24,5 +24,5 @@ Before training the CNN, the images were all resized to (512, 512, 3). This was 
 Three different fine-tuned Convolutional Neural Network models were employed to judge the quality of the textual inversion generated images: MobileNet, EfficinetNetB7 and EfficientNetV2L. All were trained using the Keras libary.
   
   
- [a link]([https://github.com/user/repo/blob/branch/other_file.md](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/Textual_Inversion_Metric/Cezanne_MobileNet.ipynb))
+ [a link](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/Textual_Inversion_Metric/Cezanne_MobileNet.ipynb)
  
