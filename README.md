@@ -20,8 +20,8 @@ I've used prompt-to-prompt technique in specific situations where it makes more 
 **Used data**: Set of prompts
 
 **Implementation**:
-- The code to generate images can be found [here](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/cross_attention/CrossAttention_suaad.ipynb)
-- The code for the evalutation steps can be found [here](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/cross_attention/cross_attention_evaluation.ipynb)
+- The code to generate images can be found [here](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/cross_attention/CrossAttention_suaad.ipynb).
+- The code for the evalutation steps can be found [here](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/cross_attention/cross_attention_evaluation.ipynb).
 
 Huggingface was used to generate images without cross attention control. 
 
@@ -35,7 +35,7 @@ Both of them are changed a little for a couple of times to generate different im
 However, SSIM was used as the primary evaluation metric. The SSIM score shows that the similarity between the generated images are high, which was the main purpose of the work. 
 
 
-**Evaluation metrics**: SSIM score was used to evalutate the similiraty of the generate images
+**Evaluation metrics**: SSIM score was used to evalutate the similiraty of the generated images
 
 **Sources**:
 - https://github.com/google/prompt-to-prompt,
