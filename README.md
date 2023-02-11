@@ -20,8 +20,8 @@ I've used prompt-to-prompt technique in specific situations where it makes more 
 **Used data**: Set of prompts
 
 **Implementation**:
-- The code to generate images can be found here.
-- The code for the evalutation steps can be found here.
+- The code to generate images can be found [here](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/cross_attention/CrossAttention_suaad.ipynb)
+- The code for the evalutation steps can be found [here](https://github.com/dennis-fast/LFI_StableDiffusion/blob/main/cross_attention/cross_attention_evaluation.ipynb)
 
 Huggingface was used to generate images without cross attention control. 
 
