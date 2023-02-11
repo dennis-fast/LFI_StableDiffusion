@@ -19,13 +19,29 @@ I've used prompt-to-prompt technique in specific situations where it makes more 
 
 **Used data**: Set of prompts
 
-**Implementation**: TBD
+**Implementation**:
+- The code to generate images can be found here.
+- The code for the evalutation steps can be found here.
+
+Huggingface was used to generate images without cross attention control. 
+
+Two base prompts was used to generate images with cross attention control. Two base prompts are:
+
+- "A fantasy landscape with a pine tree in the foreground and a red sun setting in the distance, trending on artstation"
+- "A young boy playing in a field, on a hill overlooking a green valley"
+
+Both of them are changed a little for a couple of times to generate different images. After the generation of the images, the images were manually observed to understand the level of structural similarity. 
+
+However, SSIM was used as the primary evaluation metric. The SSIM score shows that the similarity between the generated images are high, which was the main purpose of the work. 
+
 
 **Evaluation metrics**: SSIM score was used to evalutate the similiraty of the generate images
 
 **Sources**:
 - https://github.com/google/prompt-to-prompt,
 - https://prompt-to-prompt.github.io/ptp_files/Prompt-to-Prompt_preprint.pdf 
+- https://www.youtube.com/watch?v=vWytLjUtAgs
+- https://www.youtube.com/watch?v=lHcPtbZ0Mnc
 
 
 ### DreamBooth (Dennis Fast)
