@@ -35,8 +35,8 @@ I've used prompt-to-prompt technique in specific situations where it makes more 
 
 **Implementation**:
 
-- The code to generate images with Stable Diffusion 1.5 using DreamBooth can be found [here](https://colab.research.google.com/github/ShivamShrirao/diffusers/blob/main/examples/dreambooth/DreamBooth_Stable_Diffusion.ipynb)
-- The code for the preprocessing and evalutation steps can be found [here](DreamBooth/evaluation.ipynb)
+- The code to generate images with Stable Diffusion 1.5 using DreamBooth can be found [here](https://colab.research.google.com/github/ShivamShrirao/diffusers/blob/main/examples/dreambooth/DreamBooth_Stable_Diffusion.ipynb) (Google Colab)
+- The code for the preprocessing and evalutation steps can be found [here](DreamBooth/evaluation.ipynb) (
 
 In order to generate new images and to evaluate the results, I had to preprocess the dataset first. Therefore, I used SSIM metric to assess the pairwise structual dissimilarity of the training set. The averaged score over all possible combinations should be as low as possible in to ensure the highest variation among the dataset.
 
