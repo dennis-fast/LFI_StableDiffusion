@@ -29,14 +29,14 @@ I've used prompt-to-prompt technique in specific situations where it makes more 
 
 
 ### DreamBooth (Dennis Fast)
-**Short description**: Fine-tuning a model using DreamBooth technique enables generation of different images of the a subject instance in different environments, with high preservation of subject details and realistic interaction between the scene and the subject. For my part of the project, I want to use the DreamBooth technique to fine-tune Stable Diffusion model in order to create a digital avatar of myself and put it to different scenes using text prompts.
+**Short description**: Fine-tuning a model using DreamBooth technique enables generation of different images of the a subject instance in different environments, with high preservation of subject details and realistic interaction between the scene and the subject. For my part of the project, I used the DreamBooth technique to fine-tune Stable Diffusion model in order to create a digital avatar of myself and put it to different scenes using text prompts. I analysed the abilities of the fine-tuned models to generate images of digital avatar at different ages.
 
 **Used data**: The input data are the images of myself in diverse clothes, in various poses, at different ages and in wide-ranging enviroments. In order to improve the quality of the synthesized images, the input images should have the greatest possible variation so that the model learns only the features of the person and not particular clothes or environment. The inital dataset contained 122 face images.
 
 **Implementation**:
 
 - The code to generate images with Stable Diffusion 1.5 using DreamBooth can be found [here](https://colab.research.google.com/github/ShivamShrirao/diffusers/blob/main/examples/dreambooth/DreamBooth_Stable_Diffusion.ipynb) (Google Colab)
-- The code for the preprocessing and evalutation steps can be found [here](DreamBooth/evaluation.ipynb) (
+- The code for the preprocessing and evalutation steps can be found [here](DreamBooth/evaluation.ipynb)
 
 In order to generate new images and to evaluate the results, I had to preprocess the dataset first. Therefore, I used SSIM metric to assess the pairwise structual dissimilarity of the training set. The averaged score over all possible combinations should be as low as possible in to ensure the highest variation among the dataset.
 
@@ -49,8 +49,8 @@ So, I ended up with six different datasets for the models:
 - child_02: all child images (24 images),
 - adult_01: adult images where a face was detected and veryfied as the same person (24 images),
 - adult_02: all adult images (98 images),
-- child_01+adult_01: all images where a face was detected independent from the age (35 images),
-- child_02+adult_02: all available images (122 images)
+- all_01: all images where a face was detected independent from the age (child_01+adult_01, 35 images),
+- all_02: all available images (child_02+adult_02, 122 images)
 
 After the preprocessing step, the images were generated with DreamBooth using Stable Diffusion 1.5.
 
@@ -71,7 +71,15 @@ age_prompt = ['a newborn baby','a five years old child',
 prompt = f'A coloful photo of {model} as {age_prompt}, expressive face, highly detailed, sharp focus, natural bright light'
 ```
 
-After the images were generated, I applied the same metrics as for the train data to assess the quality of the generated images and to compare the generative models with each other.
+After the images were generated, I applied the same metrics as for the train data to assess the quality of the generated images and to compare the generative models with each other. The best performed model in terms of generating the images at different ages were adult_02 and all_02, which both had the highest variation of the train images.
+
+![dataset_adult_01](DreamBooth/img/dataset_adult_01.png)
+![dataset_child_01](DreamBooth/img/dataset_child_01.png)
+![dataset_full](DreamBooth/img/dataset_full.png)
+![evaluation_metrics](DreamBooth/img/evaluation_metrics.png)
+![generated_images](DreamBooth/img/generated_images.png)
+![trainset_metrics](DreamBooth/img/trainset_metrics.png)
+![visual_evaluation](DreamBooth/img/visual_evalutation.png)
 
 **Evaluation metrics**:
 - SSIM score to evalutate the variation of the images
