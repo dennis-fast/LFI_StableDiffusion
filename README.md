@@ -44,5 +44,5 @@ Fréchet Inception Distance (FID) is a performance metric that calculates the di
 - Muhammad Ferjad Naeem, Seong Joon Oh, Youngjung Uh et al.: Reliable Fidelity and Diversity Metrics for Generative Models, 2020, online: https://arxiv.org/abs/2002.09797 (retrieved: 27 November).
 
 ## Presentation
-Presentation on the project idea held on 28th of November 2023: [docs/LFI_presentation_intro.pdf]
-Final Presentation held on 6th of Febraury 2023: [docs/LFI_presentation_final.pdf]
+- Presentation on the project idea held on 28th of November 2023: [Project Idea](docs/LFI_presentation_intro.pdf)
+- Final Presentation held on 6th of Febraury 2023: [Final](docs/LFI_presentation_final.pdf)
