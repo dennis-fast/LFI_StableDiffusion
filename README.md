@@ -2,13 +2,13 @@
 
 # Application of advanced StableDiffusion techniques
 
-## About Stable Diffusion model in general
+# About Stable Diffusion model in general
 Stable Diffusion is a deep learning, text-to-image model released in 2022. It is primarily used to generate detailed images conditioned on text descriptions, though it can also be applied to other tasks such as inpainting, outpainting, and generating image-to-image translations guided by a text prompt. Stable Diffusion uses a variant of diffusion model (DM), called latent diffusion model (LDM). Stable Diffusion was trained on pairs of images and captions taken from LAION-5B, a publicly available dataset derived from Common Crawl data scraped from the web, where 5 billion image-text pairs were classified based on language, filtered into separate datasets by resolution, a predicted likelihood of containing a watermark, and predicted "aesthetic" score (e.g. subjective visual quality).
 
 
-## Application of Stable Diffusion
+# Application of Stable Diffusion
 
-### Prompt-to-Prompt (Amin Suaad)
+## Prompt-to-Prompt (Amin Suaad)
 **Short description**: Editing a generated image is challenging. Often, small changes in prompt makes a huge change in the image and this localized editing or controlled editing is a problem in situations. Prompt-to-Prompt technique is a solution is such cases. Here, Cross attention layers are key to establish the relation between the image and each word of the prompt. Prompt-to-prompt allows text level control. Some examples of Prompt-to-prompt technique:
 
 - Localized editing by replacing a word,
@@ -44,7 +44,7 @@ However, SSIM was used as the primary evaluation metric. The SSIM score shows th
 - https://www.youtube.com/watch?v=lHcPtbZ0Mnc
 
 
-### DreamBooth (Dennis Fast)
+## DreamBooth (Dennis Fast)
 **Short description**: Fine-tuning a model using DreamBooth technique enables generation of different images of the a subject instance in different environments, with high preservation of subject details and realistic interaction between the scene and the subject. For my part of the project, I used the DreamBooth technique to fine-tune Stable Diffusion model in order to create a digital avatar of myself and put it to different scenes using text prompts. I analysed the abilities of the fine-tuned models to generate images of digital avatar at different ages.
 
 **Used data**: The input data are the images of myself in diverse clothes, in various poses, at different ages and in wide-ranging enviroments. In order to improve the quality of the synthesized images, the input images should have the greatest possible variation so that the model learns only the features of the person and not particular clothes or environment. The inital dataset contained 122 face images.
@@ -117,7 +117,7 @@ Below, you can see the visual assessment of the generated image (green - simiar 
 - https://dreambooth.github.io/
 
 
-### Textual Inversion (Manuel Freistein)
+## Textual Inversion (Manuel Freistein)
 **Short description**: How good is textual inversion trained Stable Diffusion 2 at generating new realistic Cézanne landscape paintings? Does a fine-tuned Convolutional Neural Network classify their style as Original, Replica, Stable Diffusion image w/o textual inversion, or General Impressionist Landscape Painting?
 
 **Used data**: The dataset to fine-tune the CNN consists of a range of landscape paintings similar in style to that of Paul Cézanne. The photographs of the images are unfortunately not consistent in quality and were taken from a range of different sources. The images were curated and divided into 5 categories from most (0) to least similar (4) in style.
