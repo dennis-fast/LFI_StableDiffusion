@@ -65,12 +65,12 @@ Before training the CNN, the images were all resized to (512, 512, 3). This was 
 
 **Evaluation metrics**: Three different fine-tuned Convolutional Neural Network models were employed to judge the quality of the textual inversion generated images: [MobileNet](Textual_Inversion_Metric/Cezanne_MobileNet.ipynb), [EfficinetNetB7](Textual_Inversion_Metric/Cezanne_efficientnetb7.ipynb) and [EfficientNetV2L](Textual_Inversion_Metric/Cezanne_efficientnetv2l.ipynb). All were trained using the Keras libary.
    
-**Sources**: 
--https://arxiv.org/abs/2208.01618
--https://huggingface.co/docs/diffusers/training/text_inversion
--https://gitlab.com/juliensimon/huggingface-demos/-/blob/main/food102/Stable%20diffusion%20example.ipynb
--https://towardsdatascience.com/deep-image-quality-assessment-30ad71641fac
--https://www.sciencedirect.com/science/article/abs/pii/S0957417418304421
+**Sources**:
+- https://arxiv.org/abs/2208.01618
+- https://huggingface.co/docs/diffusers/training/text_inversion
+- https://gitlab.com/juliensimon/huggingface-demos/-/blob/main/food102/Stable%20diffusion%20example.ipynb
+- https://towardsdatascience.com/deep-image-quality-assessment-30ad71641fac
+- https://www.sciencedirect.com/science/article/abs/pii/S0957417418304421
 
 
 ## Presentation
