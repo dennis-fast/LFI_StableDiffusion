@@ -31,11 +31,51 @@ I've used prompt-to-prompt technique in specific situations where it makes more 
 ### DreamBooth (Dennis Fast)
 **Short description**: Fine-tuning a model using DreamBooth technique enables generation of different images of the a subject instance in different environments, with high preservation of subject details and realistic interaction between the scene and the subject. For my part of the project, I want to use the DreamBooth technique to fine-tune Stable Diffusion model in order to create a digital avatar of myself and put it to different scenes using text prompts.
 
-**Used data**: The input data are the images of myself in diverse clothes, in various poses, at different ages and in wide-ranging enviroments. In order to improve the quality of the synthesized images, the input images should have the greatest possible variation so that the model learns only the features of the person and not particular clothes or environment.
+**Used data**: The input data are the images of myself in diverse clothes, in various poses, at different ages and in wide-ranging enviroments. In order to improve the quality of the synthesized images, the input images should have the greatest possible variation so that the model learns only the features of the person and not particular clothes or environment. The inital dataset contained 122 face images.
 
-**Implementation**: TBD
+**Implementation**:
 
-**Evaluation metrics**: SSIM score was used to evalutate the dissimiliraty of the train images ... TBD
+- The code to generate images with Stable Diffusion 1.5 using DreamBooth can be found [here](https://colab.research.google.com/github/ShivamShrirao/diffusers/blob/main/examples/dreambooth/DreamBooth_Stable_Diffusion.ipynb)
+- The code for the preprocessing and evalutation steps can be found [here](DreamBooth/evaluation.ipynb)
+
+In order to generate new images and to evaluate the results, I had to preprocess the dataset first. Therefore, I used SSIM metric to assess the pairwise structual dissimilarity of the training set. The averaged score over all possible combinations should be as low as possible in to ensure the highest variation among the dataset.
+
+At the same time, I wanted to find a measure, which would classify all the train images as the same person. For this, I used [DeepFace](https://github.com/serengil/deepface) library and more specifally, its **verify** function, which detect faces at both images and compare them using cosine similarity score. I tested all the possible methods impelemented in the library and, in my case, **VGG-Face** worked the best. Therefore, I kept using this method in all the later evalutation steps.
+
+Using these two metrics, I was able to filter out the images where no face could be detected and split images into two allmost distinct subsets: child (11 images) and adult (24 images).
+
+So, I ended up with six different datasets for the models:
+- child_01: child images where a face was detected and veryfied as the same person (11 images),
+- child_02: all child images (24 images),
+- adult_01: adult images where a face was detected and veryfied as the same person (24 images),
+- adult_02: all adult images (98 images),
+- child_01+adult_01: all images where a face was detected independent from the age (35 images),
+- child_02+adult_02: all available images (122 images)
+
+After the preprocessing step, the images were generated with DreamBooth using Stable Diffusion 1.5.
+
+For the evaluation, I generated 3 images for 10 different ages (newborn, 0-10 years old, 10-20 years old, ...). You can find the age prompt and the general prompt for creating images below.
+
+```python
+age_prompt = ['a newborn baby','a five years old child',
+           'a fifteen years old teenager',
+           'a young man in his twenties',
+           'an adult man in his thirties',
+           'an exhausted adult man in his fourties with grayish hair',
+           'an wrinkled adult man in his fifties with gray hair',
+           'an wrinkled senior in his sixties',
+           'an 75 years old old senior in his seventies',
+           'a elderly senior in his eighties',
+           ]
+
+prompt = f'A coloful photo of {model} as {age_prompt}, expressive face, highly detailed, sharp focus, natural bright light'
+```
+
+After the images were generated, I applied the same metrics as for the train data to assess the quality of the generated images and to compare the generative models with each other.
+
+**Evaluation metrics**:
+- SSIM score to evalutate the variation of the images
+- verification score (binary classification using VGG-Face from DeepFace) to evaluate the similarity
 
 **Sources**: 
 - https://arxiv.org/pdf/2208.12242.pdf,
