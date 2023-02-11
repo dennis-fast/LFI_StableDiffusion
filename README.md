@@ -27,7 +27,7 @@ Stable Diffusion is a deep learning, text-to-image model released in 2022. It is
 - https://github.com/google/prompt-to-prompt,
 - https://prompt-to-prompt.github.io/ptp_files/Prompt-to-Prompt_preprint.pdf 
 
-###Conceptualizer (Manuel Freistein)
+### Conceptualizer (Manuel Freistein)
 **Short description**:
 I will try to "teach" Stable Diffusion the concept of a few particular fine art styles via textual-inversion. Textual Inversion is a technique for capturing novel concepts from a small number of example images in a way that can later be used to control text-to-image pipelines. It does so by learning new ‘words’ in the embedding space of the pipeline’s text encoder. These special words can then be used within text prompts to achieve very fine-grained control of the resulting images. Using only 3-5 images of a user-provided concept, like an object or a style, Stable Diffusion will learn to represent it through new "words" in the embedding space.
 
@@ -43,5 +43,6 @@ Fréchet Inception Distance (FID) is a performance metric that calculates the di
 - Ali Borji: Generated Faces in the Wild: Quantitative Comparison of Stable Diffusion, Midjourney and DALL-E 2, 2022, online: https://arxiv.org/abs/2210.00586 (retrieved: 27 November).
 - Muhammad Ferjad Naeem, Seong Joon Oh, Youngjung Uh et al.: Reliable Fidelity and Diversity Metrics for Generative Models, 2020, online: https://arxiv.org/abs/2002.09797 (retrieved: 27 November).
 
-
-**Presentation**: https://docs.google.com/presentation/d/1IzEd9stSTjCVETWr-vH2N3dgrIK8CVA4UmaT4aSlmas/edit?usp=sharing
+## Presentation
+Introdiction presentation held on
+Final Presentation held on 6th of Febraury 2023: https://docs.google.com/presentation/d/1IzEd9stSTjCVETWr-vH2N3dgrIK8CVA4UmaT4aSlmas/edit?usp=sharing
