@@ -33,6 +33,8 @@ I've used prompt-to-prompt technique in specific situations where it makes more 
 
 **Used data**: The input data are the images of myself in diverse clothes, in various poses, at different ages and in wide-ranging enviroments. In order to improve the quality of the synthesized images, the input images should have the greatest possible variation so that the model learns only the features of the person and not particular clothes or environment. The inital dataset contained 122 face images.
 
+![dataset_full](DreamBooth/img/dataset_full.png)
+
 **Implementation**:
 
 - The code to generate images with Stable Diffusion 1.5 using DreamBooth can be found [here](https://colab.research.google.com/github/ShivamShrirao/diffusers/blob/main/examples/dreambooth/DreamBooth_Stable_Diffusion.ipynb) (Google Colab)
@@ -44,10 +46,14 @@ At the same time, I wanted to find a measure, which would classify all the train
 
 Using these two metrics, I was able to filter out the images where no face could be detected and split images into two allmost distinct subsets: child (11 images) and adult (24 images).
 
+![trainset_metrics](DreamBooth/img/trainset_metrics.png)
+
 So, I ended up with six different datasets for the models:
 - child_01: child images where a face was detected and veryfied as the same person (11 images),
+![dataset_child_01](DreamBooth/img/dataset_child_01.png)
 - child_02: all child images (24 images),
 - adult_01: adult images where a face was detected and veryfied as the same person (24 images),
+![dataset_adult_01](DreamBooth/img/dataset_adult_01.png)
 - adult_02: all adult images (98 images),
 - all_01: all images where a face was detected independent from the age (child_01+adult_01, 35 images),
 - all_02: all available images (child_02+adult_02, 122 images)
@@ -71,19 +77,24 @@ age_prompt = ['a newborn baby','a five years old child',
 prompt = f'A coloful photo of {model} as {age_prompt}, expressive face, highly detailed, sharp focus, natural bright light'
 ```
 
-After the images were generated, I applied the same metrics as for the train data to assess the quality of the generated images and to compare the generative models with each other. The best performed model in terms of generating the images at different ages were adult_02 and all_02, which both had the highest variation of the train images.
+Here is the full matrix of generated images:
 
-![dataset_adult_01](DreamBooth/img/dataset_adult_01.png)
-![dataset_child_01](DreamBooth/img/dataset_child_01.png)
-![dataset_full](DreamBooth/img/dataset_full.png)
-![evaluation_metrics](DreamBooth/img/evaluation_metrics.png)
 ![generated_images](DreamBooth/img/generated_images.png)
-![trainset_metrics](DreamBooth/img/trainset_metrics.png)
+
+After the images were generated, I applied the same metrics as for the train data to assess the quality of the generated images and to compare the generative models with each other.
+
+![evaluation_metrics](DreamBooth/img/evaluation_metrics.png)
+
+The best performed model in terms of generating the images at different ages was adult_02, which both had the highest variation of the train images.
+
+Below, you can see the visual assessment of the generated image (green - simiar to train images, yellow - somewhat simiar to train images, red - dissimiar to train images).
+
 ![visual_evaluation](DreamBooth/img/visual_evalutation.png)
 
 **Evaluation metrics**:
 - SSIM score to evalutate the variation of the images
 - verification score (binary classification using VGG-Face from DeepFace) to evaluate the similarity
+- visual assessment (green - simiar to train images, yellow - somewhat simiar to train images, red - dissimiar to train images)
 
 **Sources**: 
 - https://arxiv.org/pdf/2208.12242.pdf,
