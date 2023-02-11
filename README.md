@@ -19,6 +19,8 @@ I've used prompt-to-prompt technique in specific situations where it makes more 
 
 **Used data**: Set of prompts
 
+**Implementation**: TBD
+
 **Evaluation metrics**: SSIM score was used to evalutate the similiraty of the generate images
 
 **Sources**:
@@ -31,12 +33,13 @@ I've used prompt-to-prompt technique in specific situations where it makes more 
 
 **Used data**: The input data are the images of myself in diverse clothes, in various poses, at different ages and in wide-ranging enviroments. In order to improve the quality of the synthesized images, the input images should have the greatest possible variation so that the model learns only the features of the person and not particular clothes or environment.
 
-**Evaluation metrics**: SSIM score was used to evalutate the dissimiliraty of the train images
+**Implementation**: TBD
+
+**Evaluation metrics**: SSIM score was used to evalutate the dissimiliraty of the train images ... TBD
 
 **Sources**: 
 - https://arxiv.org/pdf/2208.12242.pdf,
 - https://dreambooth.github.io/
-
 
 
 ### Textual Inversion (Manuel Freistein)
@@ -44,7 +47,7 @@ I've used prompt-to-prompt technique in specific situations where it makes more 
 
 **Used data**: The dataset to fine-tune the CNN consists of a range of landscape paintings similar in style to that of Paul Cézanne. The photographs of the images are unfortunately not consistent in quality and were taken from a range of different sources. The images were curated and divided into 5 categories from most (0) to least similar (4) in style.
 
-The code to generate images with Stable Diffusion 1.5 can be found [here](Textual_Inversion_Metric/StableDiffusion1.5_image_generator.ipynb).
+**Implementation**: The code to generate images with Stable Diffusion 1.5 can be found [here](Textual_Inversion_Metric/StableDiffusion1.5_image_generator.ipynb).
 
 - 0 - authentic Cézanne landscape paintings - 89 images
 - 1 - hand-painted replicas and forgeries of authentic Cézanne landscape paintings - 68 images
