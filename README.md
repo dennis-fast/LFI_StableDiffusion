@@ -32,7 +32,7 @@ Two base prompts was used to generate images with cross attention control. Two b
 
 Both of them are changed a little for a couple of times to generate different images. After the generation of the images, the images were manually observed to understand the level of structural similarity. 
 
-However, SSIM was used as the primary evaluation metric. The SSIM score shows that the similarity between the generated images are high, which was the main purpose of the work. 
+However, SSIM was used as the primary evaluation metric. The SSIM score shows that the similarity between the generated images is high which was the main purpose of the work. 
 
 
 **Evaluation metrics**: SSIM score was used to evalutate the similiraty of the generated images
